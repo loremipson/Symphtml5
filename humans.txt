@@ -1,0 +1,10 @@
+/* TEAM */
+	Symphtml5 Ensemble Author: Tyler Ipson
+	Contact: tyler@implemint.com
+	Twitter: @tyleripson
+	
+/* SITE */
+	Last update: 03/02/2011
+	Language: English
+	Doctype: HTML5
+	Tools: Symphony CMS

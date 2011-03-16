@@ -12,7 +12,7 @@
 	indent="yes" />
 
 <xsl:template match="/">
-<html class="no-js">
+<html lang="en" class="no-js">
 <head>
 	<title><xsl:call-template name="page-title"/></title>
 	<meta name="description" content=""/>

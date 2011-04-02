@@ -30,7 +30,7 @@
 	</div>
 	<footer>&#169; <xsl:value-of select="$this-year"/>&#160;<xsl:value-of select="$website-name"/></footer>
 	<script>
-		head.js("http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js", "{$workspace}/assets/js/formalize.js", "http://www.google-analytics.com/ga.js", function() {		 
+		head.js("http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js", "{$workspace}/assets/js/formalize.js", "http://www.google-analytics.com/ga.js", function() {		 
 			var tracker = _gat._getTracker("UA-********-*");
 			tracker._trackPageview();		 
 		});

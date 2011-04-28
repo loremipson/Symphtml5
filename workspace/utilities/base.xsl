@@ -21,16 +21,16 @@
 	<link rel="stylesheet" media="screen" href="{$workspace}/assets/css/site.css"/>
 </head>
 <body class="{$current-page}">
-	<header>
+	<header class="primary">
 		<h1><a href="{$root}"><xsl:value-of select="$website-name"/></a></h1>
 		<xsl:apply-templates select="data/navigation"/>
 	</header>
 	<div id="main" class="clear">
 		<xsl:apply-templates/>
 	</div>
-	<footer>&#169; <xsl:value-of select="$this-year"/>&#160;<xsl:value-of select="$website-name"/></footer>
+	<footer class="primary">&#169; <xsl:value-of select="$this-year"/>&#160;<xsl:value-of select="$website-name"/></footer>
 	<script>
-		head.js("http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js", "{$workspace}/assets/js/formalize.js", "http://www.google-analytics.com/ga.js", function() {		 
+		head.js("http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js", "{$workspace}/assets/js/formalize.js", "http://www.google-analytics.com/ga.js", function() {		 
 			var tracker = _gat._getTracker("UA-********-*");
 			tracker._trackPageview();		 
 		});

@@ -3,34 +3,43 @@
 	Class extension_export_ensemble extends Extension{
 
 		public function about(){
-			return array('name' => 'Export Ensemble',
-						 'version' => '1.12',
-						 'release-date' => '2011-01-02',
-						 'author' => array('name' => 'Alistair Kearney',
-										   'website' => 'http://pointybeard.com',
-										   'email' => 'alistair@pointybeard.com')
-				 		);
+			return array(
+				'name' => 'Export Ensemble',
+				'version' => '1.13',
+				'release-date' => '2011-04-18',
+				'author' => array(
+					array(
+						'name' => 'Alistair Kearney',
+						'website' => 'http://pointybeard.com',
+						'email' => 'alistair@pointybeard.com'
+					),
+					array(
+						'name' => 'Symphony Team',
+						'website' => 'http://symphony-cms.com',
+						'email' => 'team@symphony-cms.com'
+					)
+				)
+			);
 		}
 
 		public function getSubscribedDelegates(){
 			return array(
-						array(
-							'page' => '/system/preferences/',
-							'delegate' => 'AddCustomPreferenceFieldsets',
-							'callback' => 'appendPreferences'
-						),
-
-					);
+				array(
+					'page' => '/system/preferences/',
+					'delegate' => 'AddCustomPreferenceFieldsets',
+					'callback' => 'appendPreferences'
+				)
+			);
 		}
 
 		public function install(){
-
 			if(!class_exists('ZipArchive')){
 				if(isset(Administration::instance()->Page)){
-					Administration::instance()->Page->pageAlert(__('Export Ensemble cannot be installed, since the "<a href="http://php.net/manual/en/book.zip.php">ZipArchive</a>" class is not available. Ensure that PHP was compiled with the <code>--enable-zip</code> flag.'), AdministrationPage::PAGE_ALERT_ERROR);
+					Administration::instance()->Page->pageAlert(__('Export Ensemble cannot be installed, since the "<a href="http://php.net/manual/en/book.zip.php">ZipArchive</a>" class is not available. Ensure that PHP was compiled with the <code>--enable-zip</code> flag.'), Alert::ERROR);
 				}
 				return false;
 			}
+			return true;
 		}
 
 		private function __addFolderToArchive(&$archive, $path, $parent=NULL){
@@ -120,13 +129,11 @@
 
 			$install_template = str_replace(
 				array(
-					'<!-- BUILD -->',
 					'<!-- VERSION -->',
 					'<!-- CONFIGURATION -->'
 				),
 
 				array(
-					Symphony::Configuration()->get('build', 'symphony'),
 					Symphony::Configuration()->get('version', 'symphony'),
 					trim($config_string),
 				),
@@ -166,7 +173,7 @@
 			header('Content-type: application/octet-stream');
 			header('Expires: ' . gmdate('D, d M Y H:i:s') . ' GMT');
 
-		    header(
+			header(
 				sprintf(
 					'Content-disposition: attachment; filename=%s-ensemble.zip',
 					Lang::createFilename(
@@ -175,7 +182,7 @@
 				)
 			);
 
-		    header('Pragma: no-cache');
+			header('Pragma: no-cache');
 
 			readfile(TMP . '/ensemble.tmp.zip');
 			unlink(TMP . '/ensemble.tmp.zip');

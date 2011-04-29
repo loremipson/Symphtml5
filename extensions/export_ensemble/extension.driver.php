@@ -74,7 +74,8 @@
 				'tbl_pages',
 				'tbl_pages_types',
 				'tbl_sections',
-				'tbl_sections_association'
+				'tbl_sections_association',
+				'tbl_sessions'
 			);
 
 			## Grab the schema

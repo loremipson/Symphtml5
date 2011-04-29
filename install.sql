@@ -253,3 +253,13 @@ CREATE TABLE `tbl_sections_association` (
   PRIMARY KEY (`id`),
   KEY `parent_section_id` (`parent_section_id`,`child_section_id`,`child_section_field_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- *** STRUCTURE: `tbl_sessions` ***
+DROP TABLE IF EXISTS `tbl_sessions`;
+CREATE TABLE `tbl_sessions` (
+  `session` varchar(255) NOT NULL,
+  `session_expires` int(10) unsigned NOT NULL DEFAULT '0',
+  `session_data` text,
+  PRIMARY KEY (`session`),
+  KEY `session_expires` (`session_expires`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;

@@ -3,6 +3,7 @@
 
 <xsl:import href="page-title.xsl"/>
 <xsl:import href="navigation.xsl"/>
+<xsl:import href="scripts.xsl"/>
 	
 <xsl:output method="xml"
 	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -29,12 +30,7 @@
 		<xsl:apply-templates/>
 	</div>
 	<footer class="primary">&#169; <xsl:value-of select="$this-year"/>&#160;<xsl:value-of select="$website-name"/></footer>
-	<script>
-		head.js("http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js", "{$workspace}/assets/js/formalize.js", "http://www.google-analytics.com/ga.js", function() {		 
-			var tracker = _gat._getTracker("UA-********-*");
-			tracker._trackPageview();		 
-		});
-	</script>
+	<xsl:call-template name="scripts"/>
 </body>
 </html>
 </xsl:template>

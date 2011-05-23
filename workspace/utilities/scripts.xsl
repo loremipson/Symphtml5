@@ -4,7 +4,7 @@
 <xsl:template name="scripts">
 	<script>
 		head.js(
-			{jquery: "http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"},
+			{jquery: "http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"},
 			{formalize: "<xsl:value-of select="$workspace"/>/assets/js/formalize.js"},
 			{analytics: "http://www.google-analytics.com/ga.js"}
 		);

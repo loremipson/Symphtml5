@@ -1,20 +1,20 @@
 # Symphtml5 #
 
-- Version: 0.3
-- Date: 3rd August 2011
+- Version: 0.2.1
+- Date: 23rd May 2011
 - Release Notes: <http://symphony-cms.com/download/ensembles/view/63167/>
 - Github Repository: <https://github.com/Implemint/Symphtml5>
 
 
 ## Overview
 
-Symphtml5 is a simple base / starter ensemble for [Symphony CMS](http://symphony-cms.com/), and serves a purpose similar to the popular [HTML5 Boilerplate](http://html5boilerplate.com/). This repository represents Symphony CMS version "2.2.2" and is considered stable.
+Symphtml5 is a simple base / starter ensemble for [Symphony CMS](http://symphony-cms.com/), and serves a purpose similar to the popular [HTML5 Boilerplate](http://html5boilerplate.com/). This repository represents Symphony CMS version "2.2.1" and is considered stable.
 
 ### Symphony Server Requirements
 
 - PHP 5.2 or above
 - PHP's LibXML module, with the XSLT extension enabled (--with-xsl)
-- MySQL 5.0 or above
+- MySQL 4.1 or above
 - An Apache or Litespeed webserver
 - Apache's mod_rewrite module or equivalent
 

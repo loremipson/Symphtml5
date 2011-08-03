@@ -29,8 +29,14 @@
 		exit();
 	}
 
+	// Set the current timezone, should that not be available
+	// default to GMT.
+	if(!date_default_timezone_set(@date_default_timezone_get())) {
+		date_default_timezone_set('GMT');
+	}
+
 	// Defines
-	define('kVERSION', '2.2.1');
+	define('kVERSION', '2.2.2');
 	define('kINSTALL_ASSET_LOCATION', './symphony/assets/installer');
 	define('kINSTALL_FILENAME', basename(__FILE__));
 	define('DOCROOT', rtrim(dirname(__FILE__), '\\/'));
@@ -177,8 +183,9 @@
 		$conf['symphony']['allow_page_subscription'] = '1';
 		$conf['symphony']['lang'] = 'en';
 		$conf['symphony']['pages_table_nest_children'] = 'no';
-		$conf['symphony']['version'] = '2.2.1';
+		$conf['symphony']['version'] = '2.2.2';
 		$conf['symphony']['strict_error_handling'] = 'yes';
+		$conf['symphony']['session_gc_divisor'] = '10';
 		$conf['log']['archive'] = '1';
 		$conf['log']['maxsize'] = '102400';
 		$conf['image']['cache'] = '1';

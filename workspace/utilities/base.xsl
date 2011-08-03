@@ -3,7 +3,6 @@
 
 <xsl:import href="page-title.xsl"/>
 <xsl:import href="navigation.xsl"/>
-<xsl:import href="scripts.xsl"/>
 	
 <xsl:output method="xml"
 	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -19,6 +18,7 @@
 	<meta name="description" content=""/>
 	<meta name="author" content="{$root}/humans.txt"/>
 	<script src="{$workspace}/assets/js/head.js"></script>
+	<link rel="stylesheet" media="screen" href="{$workspace}/assets/css/reset.css"/>
 	<link rel="stylesheet" media="screen" href="{$workspace}/assets/css/site.css"/>
 </head>
 <body class="{$current-page}">
@@ -30,7 +30,17 @@
 		<xsl:apply-templates/>
 	</div>
 	<footer class="primary">&#169; <xsl:value-of select="$this-year"/>&#160;<xsl:value-of select="$website-name"/></footer>
-	<xsl:call-template name="scripts"/>
+	<script>
+		head.js(
+			{jquery: "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"},
+			{analytics: "http://www.google-analytics.com/ga.js"}
+		);
+		
+		head.ready(function() {		 
+			var tracker = _gat._getTracker("UA-********-*");
+			tracker._trackPageview();		 
+		});
+	</script>
 </body>
 </html>
 </xsl:template>

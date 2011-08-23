@@ -8,7 +8,7 @@
 
 ## Overview
 
-Symphtml5 is a simple base / starter ensemble for [Symphony CMS](http://symphony-cms.com/), and serves a purpose similar to the popular [HTML5 Boilerplate](http://html5boilerplate.com/). This repository represents Symphony CMS version "2.2.2" and is considered stable.
+Symphtml5 is a simple base / starter ensemble for [Symphony CMS](http://symphony-cms.com/), and serves a purpose similar to the popular [HTML5 Boilerplate](http://html5boilerplate.com/). This repository represents Symphony CMS version "2.2.3" and is considered stable.
 
 ### Symphony Server Requirements
 

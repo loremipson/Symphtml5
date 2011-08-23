@@ -1,7 +1,7 @@
 # Symphtml5 #
 
-- Version: 0.3
-- Date: 3rd August 2011
+- Version: 0.4
+- Date: 23rd August 2011
 - Release Notes: <http://symphony-cms.com/download/ensembles/view/63167/>
 - Github Repository: <https://github.com/Implemint/Symphtml5>
 

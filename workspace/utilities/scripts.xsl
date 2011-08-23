@@ -4,14 +4,12 @@
 <xsl:template name="scripts">
 	<script>
 		head.js(
-			{jquery: "http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"},
-			{formalize: "<xsl:value-of select="$workspace"/>/assets/js/formalize.js"},
+			{jquery: "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"},
+			{site: "<xsl:value-of select="$workspace"/>/assets/js/site.js"},
 			{analytics: "http://www.google-analytics.com/ga.js"}
 		);
-		
-		head.ready("analytics", function() {
-			var tracker = _gat._getTracker("UA-********-*");
-			tracker._trackPageview();
+		head.ready(function(){
+			window._gaq = [['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
 		});
 	</script>
 </xsl:template>

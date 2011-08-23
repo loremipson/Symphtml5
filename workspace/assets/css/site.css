@@ -1,0 +1,9 @@
+.clear:before, .clear:after,
+.row:before, .row:after {
+	content: "";
+	display: table;
+}
+.clear:after,
+.row:after { clear:both }
+.clear,
+.row { zoom:1 }

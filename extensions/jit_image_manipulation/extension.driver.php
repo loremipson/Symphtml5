@@ -5,12 +5,19 @@
 		public function about(){
 			return array(
 				'name' => 'JIT Image Manipulation',
-				'version' => '1.11',
-				'release-date' => '2011-08-01',
+				'version' => '1.13',
+				'release-date' => '2011-08-16',
 				'author' => array(
-					'name' => 'Alistair Kearney',
-					'website' => 'http://pointybeard.com',
-					'email' => 'alistair@pointybeard.com'
+					array(
+						'name' => 'Alistair Kearney',
+						'website' => 'http://pointybeard.com',
+						'email' => 'alistair@pointybeard.com'
+					),
+					array(
+						'name' => 'Symphony Team',
+						'website' => 'http://symphony-cms.com/',
+						'email' => 'team@symphony-cms.com'
+					)
 				)
 			);
 		}

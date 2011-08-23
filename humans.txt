@@ -4,7 +4,7 @@
 	Twitter: @tyleripson
 	
 /* SITE */
-	Last update: 05/04/2011
+	Last update: 08/23/2011
 	Language: English
 	Doctype: HTML5
-	Tools: Symphony CMS, jQuery, HeadJS, Formalize
+	Tools: Symphony CMS, jQuery, HeadJS, Normalize

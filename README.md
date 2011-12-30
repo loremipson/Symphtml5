@@ -1,14 +1,14 @@
 # Symphtml5 #
 
-- Version: 0.4
-- Date: 23rd August 2011
+- Version: 0.5
+- Date: 30th December 2011
 - Release Notes: <http://symphony-cms.com/download/ensembles/view/63167/>
 - Github Repository: <https://github.com/Implemint/Symphtml5>
 
 
 ## Overview
 
-Symphtml5 is a simple base / starter ensemble for [Symphony CMS](http://symphony-cms.com/), and serves a purpose similar to the popular [HTML5 Boilerplate](http://html5boilerplate.com/). This repository represents Symphony CMS version "2.2.3" and is considered stable.
+Symphtml5 is a simple base / starter ensemble for [Symphony CMS](http://symphony-cms.com/), and serves a purpose similar to the popular [HTML5 Boilerplate](http://html5boilerplate.com/). This repository represents Symphony CMS version "2.2.5" and is considered stable.
 
 ### Symphony Server Requirements
 

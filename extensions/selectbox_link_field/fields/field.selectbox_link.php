@@ -45,6 +45,10 @@
 			return true;
 		}
 
+		public function requiresSQLGrouping(){
+			return ($this->get('allow_multiple_selection') == 'yes' ? true : false);
+		}
+
 	/*-------------------------------------------------------------------------
 		Setup:
 	-------------------------------------------------------------------------*/
@@ -58,7 +62,7 @@
 					PRIMARY KEY (`id`),
 					KEY `entry_id` (`entry_id`),
 					KEY `relation_id` (`relation_id`)
-				) ENGINE=MyISAM;"
+				) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;"
 			);
 		}
 
@@ -177,7 +181,7 @@
 
 			try {
 				// Figure out which `related_field_id` is from that section
-				$relations = Symphony::Database()->fetchCol('id', 0, sprintf("
+				$relations = Symphony::Database()->fetchCol('id', sprintf("
 						SELECT e.id
 						FROM `tbl_fields` AS `f`
 						LEFT JOIN `tbl_sections` AS `s` ON (f.parent_section = s.id)
@@ -220,7 +224,11 @@
 			// 2. Find all the provided `relation_id`'s related section
 			// We also cache the result using the `relation_id` as identifier
 			// to prevent unnecessary queries
+			$relation_id = array_filter($relation_id);
+			if(empty($relation_id)) return array();
+
 			$hash = md5(serialize($relation_id));
+
 			if(!isset(self::$cache[$hash]['relation_data'])) {
 				$relation_ids = Symphony::Database()->fetch(sprintf("
 					SELECT e.id, e.section_id, s.name, s.handle
@@ -469,7 +477,6 @@
 			if(!is_array($data['relation_id'])) {
 				$data['relation_id'] = array($data['relation_id']);
 			}
-
 			$related_values = $this->findRelatedValues($data['relation_id']);
 
 			foreach($related_values as $relation) {

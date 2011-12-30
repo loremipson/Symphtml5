@@ -36,7 +36,7 @@
 	}
 
 	// Defines
-	define('kVERSION', '2.2.3');
+	define('kVERSION', '2.2.5');
 	define('kINSTALL_ASSET_LOCATION', './symphony/assets/installer');
 	define('kINSTALL_FILENAME', basename(__FILE__));
 	define('DOCROOT', rtrim(dirname(__FILE__), '\\/'));
@@ -183,7 +183,7 @@
 		$conf['symphony']['allow_page_subscription'] = '1';
 		$conf['symphony']['lang'] = 'en';
 		$conf['symphony']['pages_table_nest_children'] = 'no';
-		$conf['symphony']['version'] = '2.2.3';
+		$conf['symphony']['version'] = '2.2.5';
 		$conf['symphony']['strict_error_handling'] = 'yes';
 		$conf['symphony']['session_gc_divisor'] = '10';
 		$conf['log']['archive'] = '1';

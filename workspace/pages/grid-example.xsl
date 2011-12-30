@@ -66,4 +66,26 @@
 	</div>
 </xsl:template>
 
+<xsl:template match="data" mode="styles">
+	<xsl:comment>
+		Using mode, you can apply page specific meta, styles, and javascript.
+		These three examples, styles and javascript (loader/scripts below), demonstrate how to do that.
+	</xsl:comment>
+	<link rel="stylesheet" href="{$workspace}/assets/css/your-css-file.css"/>
+</xsl:template>
+
+<xsl:template match="data" mode="loader">
+	<xsl:comment>
+		You can load additional javascript files using the "loader" mode, just make sure
+		it follows the headjs format, and is preceded by a comma. For example:
+	</xsl:comment>
+	{your-third-party-name: "<xsl:value-of select="$workspace"/>/assets/js/your-third-party-file.js"},
+</xsl:template>
+
+<xsl:template match="data" mode="scripts">
+	$('#selector').each(function(){
+		// Enter your js here
+	});
+</xsl:template>
+
 </xsl:stylesheet>

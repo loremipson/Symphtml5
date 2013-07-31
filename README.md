@@ -39,7 +39,7 @@ Clone down the submodules:
 
 Clone the Symphtml5 repository into the workspace folder, then change into it:
 
-`git clone git://github.com/Implemint/Symphtml5 workspace`
+`git clone git://github.com/Implemint/Symphtml5.git workspace`
 
 `cd workspace`
 

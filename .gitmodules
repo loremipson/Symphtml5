@@ -1,0 +1,3 @@
+[submodule "extensions/html5_doctype"]
+	path = extensions/html5_doctype
+	url = git://github.com/symphonists/html5_doctype.git

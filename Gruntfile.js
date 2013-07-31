@@ -45,6 +45,14 @@ module.exports = function(grunt) {
 			}
 		},
 
+		copy: {
+			main: {
+				files: [
+					{expand: true, src: ['extensions/**'], dest: '../'}
+				]
+			}
+		},
+
 		watch: {
 			options: {
 				livereload: true
@@ -67,6 +75,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	grunt.registerTask('default', 'watch');
 }

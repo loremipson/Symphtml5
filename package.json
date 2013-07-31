@@ -1,6 +1,6 @@
 {
   "name": "symphtml5",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Starter HTML5 workspace for Symphony CMS projects.",
   "author": "Tyler Ipson",
   "dependencies": {
@@ -9,5 +9,9 @@
     "grunt-contrib-watch": "~0.5.1",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-imagemin": "~0.1.4"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1"
   }
 }

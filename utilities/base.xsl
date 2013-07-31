@@ -12,15 +12,16 @@
 	indent="yes"/>
 
 <xsl:template match="/">
-<html lang="en" class="no-js">
+<html lang="en" class="{$current-page}">
 	<head>
+		<meta charset="utf-8"/>
 		<title><xsl:call-template name="page-title"/></title>
 		<xsl:apply-templates mode="meta"/>
 		<link rel="stylesheet" href="{$workspace}/public/styles/lib/normalize.css"/>
 		<link rel="stylesheet" href="{$workspace}/public/styles/site.css"/>
 		<xsl:apply-templates mode="styles"/>
 	</head>
-	<body class="{$current-page} container">
+	<body>
 		<header>
 			<h1><a href="{$root}"><xsl:value-of select="$website-name"/></a></h1>
 			<xsl:apply-templates select="data/navigation"/>

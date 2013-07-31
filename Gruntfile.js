@@ -30,21 +30,6 @@ module.exports = function(grunt) {
 			]
 		},
 
-		imagemin: {
-			dist: {
-				options: {
-					optimizationLevel: 7,
-					progressive: true
-				},
-				files: [{
-					expand: true,
-					cwd: 'public/images/',
-					src: '**/*',
-					dest: 'public/images/'
-				}]
-			}
-		},
-
 		copy: {
 			main: {
 				files: [
@@ -74,7 +59,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	grunt.registerTask('default', 'watch');

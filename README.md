@@ -7,7 +7,7 @@
 
 ## Overview
 
-Symphtml5 is a simple HTML5 starter workspace for [Symphony CMS](http://symphony-cms.com/). It's purpose is to take care of repetitive tasks when getting a new project up and rolling.
+Symphtml5 is a simple HTML5 starter workspace for [Symphony CMS](http://symphony-cms.com/). Its purpose is to take care of repetitive tasks when getting a new project up and rolling.
 
 ## Usage
 

@@ -57,6 +57,10 @@ Now simply point your browser to your directory and walk through the installatio
 
 Once you have Symphony installed, you can use Grunt while you develop to watch for changes and run tasks on the fly. Simply run `grunt` from the inside the directory with Terminal.
 
+By default, I put all of my assets in a `public/` folder, ie: `public/styles` `public/scripts` `public/fonts`, etc.
+
+Grunt is watching and compiling SASS files that live in `public/styles/sass`. The css then is compiled to `public/styles`. You can change this, but make sure you update both the `utilities/base.xsl` and `Gruntfile.js` to point to the correct directories.
+
 ####Changelog
 
 #####1.0.0 - *July 31st, 2013*
